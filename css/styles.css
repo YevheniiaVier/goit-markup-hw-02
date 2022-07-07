@@ -9,6 +9,8 @@ accent-background-color #F5F4FA
 black-color #000000
 header-color #ECECEC
 portfolio-secondarybgc #EEEEEE
+hover-btn-color #188CE8
+transparent-color rgba(255, 255, 255, 0.6)
 
 */
 
@@ -28,6 +30,8 @@ Roboto 900
   --accent-background-color: #f5f4fa;
   --black-color: #000000;
   --portfolio-secondarybgc: #eeeeee;
+  --hover-btn-color: #188ce8;
+  --transparent-color: rgba(255, 255, 255, 0.6);
 }
 
 /* сторінка Студія */
@@ -104,20 +108,21 @@ body {
 
 .btn {
   font-family: inherit;
-  font-weight: 700;
   font-size: 16px;
-  line-height: 1.87;
-  color: var(--white-color);
-
+  cursor: pointer;
   background-color: var(--accent-color);
 }
 .btn.primary {
+  font-weight: 700;
+  line-height: 1.87;
   letter-spacing: 0.06em;
+  color: var(--white-color);
 }
+
 .btn.primary:hover,
 .btn.primary:focus {
-  color: var(--title-text-color);
-  background-color: var(--accent-background-color);
+  color: var(--white-color);
+  background-color: var(--hover-btn-color);
 }
 
 /* section */
@@ -135,12 +140,25 @@ body {
 
 .preferences .title {
   font-weight: 700;
+  font-size: 14px;
   line-height: 1.14;
   color: var(--title-text-color);
 
   text-transform: uppercase;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /* activities */
 
 /* team */
@@ -173,9 +191,12 @@ footer {
 }
 .bottom-panel .link {
   font-style: normal;
-  color: var(--white-color);
+  color: var(--transparent-color);
 
   text-decoration: none;
+}
+.bottom-panel .map {
+  color: var(--white-color);
 }
 
 .bottom-panel .link:hover,
@@ -187,13 +208,13 @@ footer {
 
 .btn.secondary {
   font-weight: 500;
-  font-size: 16;
   line-height: 1.62;
+  letter-spacing: 0.03em;
   color: var(--title-text-color);
-  cursor: pointer;
 
   background-color: var(--accent-background-color);
 }
+
 .btn.secondary:hover,
 .btn.secondary:focus {
   color: var(--white-color);
@@ -217,7 +238,3 @@ footer {
   letter-spacing: 0.06em;
   color: var(--title-text-color);
 }
-
-/* .work-examples .section-title {
-  приховати
-} */
