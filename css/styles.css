@@ -8,7 +8,7 @@ secondary-background-color #2F303A
 accent-background-color #F5F4FA
 black-color #000000
 header-color #ECECEC
-portfolio-secondarybgc #EEEEEE
+portfolio-secondary-bgc #EEEEEE
 hover-btn-color #188CE8
 transparent-color rgba(255, 255, 255, 0.6)
 
@@ -29,7 +29,7 @@ Roboto 900
   --secondary-background-color: #2f303a;
   --accent-background-color: #f5f4fa;
   --black-color: #000000;
-  --portfolio-secondarybgc: #eeeeee;
+  --portfolio-secondary-bgc: #eeeeee;
   --hover-btn-color: #188ce8;
   --transparent-color: rgba(255, 255, 255, 0.6);
 }
@@ -48,6 +48,10 @@ body {
 .list {
   list-style: none;
 }
+.link {
+  text-decoration: none;
+}
+
 .logo {
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -67,7 +71,6 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
-  text-decoration: none;
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -83,7 +86,6 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
-  text-decoration: none;
 }
 .contacts-nav .link:hover,
 .contacts-nav .link:focus {
@@ -140,7 +142,7 @@ body {
 
 .preferences .title {
   font-weight: 700;
-  font-size: 14px;
+  font-size: inherit;
   line-height: 1.14;
   color: var(--title-text-color);
 
@@ -159,7 +161,6 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-/* activities */
 
 /* team */
 .team {
@@ -182,7 +183,7 @@ body {
 }
 
 /* footer */
-footer {
+.bottom {
   background-color: var(--secondary-background-color);
 }
 
@@ -192,8 +193,6 @@ footer {
 .bottom-panel .link {
   font-style: normal;
   color: var(--transparent-color);
-
-  text-decoration: none;
 }
 .bottom-panel .map {
   color: var(--white-color);
@@ -222,8 +221,6 @@ footer {
 }
 .work-examples .link {
   color: inherit;
-
-  text-decoration: none;
 }
 
 .work-examples .text {
